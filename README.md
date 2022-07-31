@@ -1,2 +1,2 @@
 # Divyapp
-This repository contains programs for  Web &amp; App platforms for divyanjan project #Divyapp
+This repository will contain programs for  Web, App & Backend for divyanjan project #Divyapp

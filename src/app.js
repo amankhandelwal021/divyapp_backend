@@ -30,6 +30,8 @@ app.use(cors(corsOptions));
 const registrationRoute = require("../routes/registration_route");
 const generateNewAccessTokenRoute = require("../routes/get_new_access_token");
 const userAuthrisationRoute = require("../routes/user_authrisation");
+const locationRoute = require("../routes/location_data_route");
+const questionRoute = require("../routes/question_route");
 
 app.get("/", (req, res) => {
   res.status(200).json({
@@ -39,6 +41,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1", registrationRoute);
 app.use("/api/v1", userAuthrisationRoute);
+app.use("/api/v1", locationRoute);
+app.use("/api/v1", questionRoute);
 app.use("/api/v1/auth", generateNewAccessTokenRoute);
 
 app.listen(port, () => {

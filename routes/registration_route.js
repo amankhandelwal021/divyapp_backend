@@ -9,9 +9,11 @@ const {
   generateRefreshToken,
   authenticateAccessToken,
 } = require("../src/middleware/auth_token");
+const fs = require("fs");
 
 require("../src/database/connection");
 const nodemailer = require("nodemailer");
+const { collectData } = require("../utils/save_data_to_database");
 
 const config = nodemailer.createTransport({
   service: "gmail",
